@@ -1,8 +1,8 @@
-from django.template import RequestContext
-from django.shortcuts import render_to_response
 
+from django.http import HttpResponse
+from django.template import loader
 
 def index(request):
 
-    return render_to_response("larb/index.html",
-                              RequestContext(request))
+	template = loader.get_template('larb/index.html')
+	return HttpResponse( template.render({}, request))
