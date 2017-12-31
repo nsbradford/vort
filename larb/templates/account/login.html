@@ -6,8 +6,8 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-    <a href="/accounts/facebook/login/"><div class="fb"></div></a>
-    {% include "socialaccount/snippets/login_extra.html" %}
+<!--     <a href="/accounts/facebook/login/"><div class="fb"></div></a>
+    {% include "socialaccount/snippets/login_extra.html" %} -->
     <div class="inset">
         <div class="header">Or sign in directly</div>
         <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -27,9 +27,9 @@
           <button class="btn" type="submit">{% trans "Sign In" %}</button>
         </form>
 
-        <div class="footnote">
+<!--         <div class="footnote">
             Don't have an account? Login with Facebook above or <a href="{% url 'account_signup' %}">Sign Up</a>
-        </div>
+        </div> -->
     </div>
 {% endblock %}
 
